@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'latin-modern-roman';
+    src: url('../fonts/lmr-regular.woff2') format('woff2'),
+         url('../fonts/lmr-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latin-modern-roman';
+    src: url('../fonts/lmr-italic.woff2') format('woff2'),
+         url('../fonts/lmr-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* links */
+
+a {
+  color: black;
+}
+
+a:link, a:visited {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: latin-modern-roman;
+  font-size: 14pt;
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  border-top: 10px solid #EA983f;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+section.main {
+  padding: 0px 20px;
+  padding-top: 80px;
+}
+

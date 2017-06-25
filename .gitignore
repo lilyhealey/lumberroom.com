@@ -1,0 +1,6 @@
+# duh
+.DS_Store
+*~
+
+# media files
+media/*
