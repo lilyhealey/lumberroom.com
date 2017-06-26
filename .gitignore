@@ -4,3 +4,6 @@
 
 # media files
 media/*
+
+# sql dumps
+sql/*

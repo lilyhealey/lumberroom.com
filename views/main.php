@@ -2,7 +2,7 @@
 $body = $item['body'];
 
 if($body)
-{ 
-?><section><? echo nl2br($body);?></section><?
+{
+?><section class="body"><? echo nl2br($body);?></section><?
 }
 ?>

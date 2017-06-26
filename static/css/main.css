@@ -20,7 +20,22 @@ a {
   color: black;
 }
 
-a:link, a:visited {
+header > a:link,
+header > a:visited,
+.menu-item > a:link,
+.menu-item > a:visited {
+  text-decoration: none;
+}
+
+header > a:hover,
+.menu-item > a:hover {
+  text-decoration: underline;
+}
+
+a:link,
+a:visited,
+.select > a:link,
+.select > a:visited  {
   text-decoration: underline;
 }
 
@@ -51,7 +66,11 @@ header {
 }
 
 section.main {
+  max-width: 600px;
   padding: 0px 20px;
   padding-top: 80px;
 }
 
+section.body {
+  padding-top: 20px;
+}

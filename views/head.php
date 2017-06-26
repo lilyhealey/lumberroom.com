@@ -32,7 +32,7 @@ if ($dev)
   set_cookie('dev', $dev);
 else
   die("under construction");
-  
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,6 +52,14 @@ else
       foreach ($children as $child)
       {
         $menu_url = "/".$child['url'];
-        ?><div><a href="<? echo $menu_url;?>"><? echo $child['name1']; ?></a></div><?
+        if ($child['id'] == $item['id'])
+        {
+        ?><div class="menu-item select"><?
+        }
+        else
+        {
+        ?><div class="menu-item"><?
+        }
+        ?><a href="<? echo $menu_url;?>"><? echo $child['name1']; ?></a></div><?
       }
 	  ?></div>
