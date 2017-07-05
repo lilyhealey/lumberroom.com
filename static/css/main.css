@@ -76,3 +76,9 @@ section.main {
 section.body {
   padding-top: 20px;
 }
+
+figcaption {
+  font-family: "Courier New";
+  font-size: 12pt;
+  line-height: 14pt;
+}
