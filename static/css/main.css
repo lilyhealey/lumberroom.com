@@ -23,12 +23,15 @@ a {
 header > a:link,
 header > a:visited,
 .menu-item > a:link,
-.menu-item > a:visited {
+.menu-item > a:visited,
+li > a:link,
+li > a:visited {
   text-decoration: none;
 }
 
 header > a:hover,
-.menu-item > a:hover {
+.menu-item > a:hover ,
+li > a:hover {
   text-decoration: underline;
 }
 
@@ -51,12 +54,12 @@ a:active {
 
 * {
   box-sizing: border-box;
-  font-family: latin-modern-roman;
-  font-size: 14pt;
 }
 
 body {
   margin: 0px;
+  font-family: latin-modern-roman;
+  font-size: 14pt;
 }
 
 header {
@@ -77,6 +80,17 @@ section.body {
   padding-top: 20px;
 }
 
+h2 {
+  font-family: helvetica;
+  margin-bottom: 0px;
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 figcaption {
   font-family: "Courier New";
   font-size: 12pt;
