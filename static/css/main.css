@@ -94,7 +94,8 @@ ul {
 figure {
   cursor: pointer;
 }
-figcaption {
+figcaption,
+#gallery-cap {
   font-family: "Courier New";
   font-size: 12pt;
   line-height: 14pt;
@@ -115,10 +116,23 @@ img {
   background-color: white;
 }
 
-#img-gallery {
-	position: fixed;
+#gallery-fig {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#gallery-img {
 	max-height: 90%;
 	max-width: 90%;
+  position: relative;
+left: 50%;
+transform: translateX(-50%);
+}
+
+#gallery-cap {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
 }
 
 #gallery-ex,

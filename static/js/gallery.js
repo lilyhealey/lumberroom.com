@@ -3,6 +3,7 @@
 function launch(i) {
 	show(gallery_id);
 	setsrc(gallery_img, images[i]);
+  sethtml(gallery_cap, captions[i]);
 	index = i; // store current image index
 
 	if(!attached)
@@ -25,6 +26,7 @@ function prev() {
 		index = images.length;
 	index--;
 	setsrc(gallery_img, images[index]);
+  sethtml(gallery_cap, captions[index]);
 }
 
 function next() {
@@ -32,6 +34,7 @@ function next() {
 		index = -1;
 	index++;
 	setsrc(gallery_img, images[index]);
+  sethtml(gallery_cap, captions[index]);
 }
 
 function close_gallery() {
@@ -81,6 +84,11 @@ function setsrc(id, url) {
 	// get element
 	el = document.getElementById(id);
 	el.src = url;
+}
+
+function sethtml(id, h) {
+  el = document.getElementById(id);
+  el.innerHTML = h;
 }
 
 function hide(id)
