@@ -6,11 +6,18 @@ $curr_letter = $artist[0];
 $media = $oo->media($uu->id);
 $media_urls = array();
 $media_captions = array();
+$i = 0;
 
 foreach ($media as $m)
 {
   $url = m_url($m);
+  $media_urls[] = $url;
   $caption = $m['caption'];
-  ?><figure><img src="<? echo $url; ?>"><figcaption><? echo nl2br($caption); ?></figcaption></figure><?
+  ?><figure onclick='launch(<? echo $i++; ?>)'><?
+    ?><img src="<? echo $url; ?>"><?
+    ?><figcaption><? echo nl2br($caption); ?></figcaption><?
+  ?></figure><?
 }
+
+require_once("gallery.php");
 ?>

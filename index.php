@@ -8,7 +8,7 @@ if (empty($uri[0]))
 {
   require_once("views/main.php");
 }
-else if ($uri[0] == "collection")
+else if ($uri[0] == "collection" or $uri[0] == "exhibitions")
 {
   if (empty($uri[1]))
     require_once("views/collection.php");

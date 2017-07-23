@@ -42,6 +42,7 @@ else
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" href="<? echo $host;?>media/png/icon.png">
 		<link rel="stylesheet" href="<? echo $host; ?>static/css/main.css">
+    <script type="text/javascript" src="<? echo $host; ?>static/js/gallery.js"></script>
 	</head>
 	<body>
 	  <div id="header-container"><header><a href="/"><? echo $title; ?></a></header></div>
