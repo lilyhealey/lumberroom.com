@@ -2,9 +2,9 @@
   <div id="gallery-ex" onclick="close_gallery();"><img src="/media/svg/ex.svg"></div>
 		<div id="gallery-prev" onclick="prev();"><img src="/media/svg/la.svg"></div>
 		<div id="gallery-next" onclick="next();"><img src="/media/svg/ra.svg"></div>
-  <figure id="gallery-fig">
-    <img id="gallery-img" class="" src="/media/00001.jpeg">
-    <figcaption id="gallery-cap"></figcaption>
+  <figure class="gallery">
+      <img id="gallery-img" class="gallery" src="/media/00001.jpeg">
+      <figcaption id="gallery-cap" class="gallery"></figcaption>
   </figure>
 </div>
 <script type="text/javascript">

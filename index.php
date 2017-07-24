@@ -15,7 +15,14 @@ else if ($uri[0] == "collection" or $uri[0] == "exhibitions")
   else
     require_once("views/collection-artist.php");
 }
-
+else if ($uri[0] == "info")
+{
+  require_once("views/info.php");
+}
+else if($uri[0] == "events")
+{
+  require_once("views/events.php");
+}
 // close body, close html
 require_once("views/foot.php");
 ?>

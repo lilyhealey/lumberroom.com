@@ -1,3 +1,8 @@
+/*
+ * main.css -- lumberroom.com
+ */
+
+/* typefaces */
 @font-face {
     font-family: 'latin-modern-roman';
     src: url('../fonts/lmr-regular.woff2') format('woff2'),
@@ -14,8 +19,11 @@
     font-style: italic;
 }
 
-/* links */
-
+/*
+  --------------------------------------------------------
+   links
+  --------------------------------------------------------
+*/
 a {
   color: black;
 }
@@ -94,8 +102,7 @@ ul {
 figure {
   cursor: pointer;
 }
-figcaption,
-#gallery-cap {
+figcaption {
   font-family: "Courier New";
   font-size: 12pt;
   line-height: 14pt;
@@ -104,32 +111,30 @@ img {
   max-width: 100%;
 }
 
+/* gallery stuff */
 #gallery {
-  position: fixed;
   width: 100%;
   height: 100%;
+  position: fixed;
   z-index: 100;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: white;
 }
 
-#gallery-fig {
+figure.gallery {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-#gallery-img {
-	max-height: 90%;
-	max-width: 90%;
+
+img.gallery {
+	max-height: 80%;
+	max-width: 80%;
+  left: 50%;
   position: relative;
-left: 50%;
-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-#gallery-cap {
+figcaption.gallery {
   width: 100%;
   text-align: center;
   padding: 10px;
@@ -165,6 +170,12 @@ transform: translateX(-50%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hidden {
