@@ -2,7 +2,8 @@
 // open the image gallery, starting at image i
 function launch(i) {
 	show(gallery_id);
-	setsrc(gallery_img, images[i]);
+	// setsrc(gallery_img, images[i]);
+  setbg(gallery_img, images[i]);
   sethtml(gallery_cap, captions[i]);
 	index = i; // store current image index
 
@@ -25,7 +26,8 @@ function prev() {
 	if(index == 0)
 		index = images.length;
 	index--;
-	setsrc(gallery_img, images[index]);
+	// setsrc(gallery_img, images[index]);
+  setbg(gallery_img, images[index]);
   sethtml(gallery_cap, captions[index]);
 }
 
@@ -33,7 +35,8 @@ function next() {
 	if(index == images.length-1)
 		index = -1;
 	index++;
-	setsrc(gallery_img, images[index]);
+	// setsrc(gallery_img, images[index]);
+  setbg(gallery_img, images[index]);
   sethtml(gallery_cap, captions[index]);
 }
 
@@ -76,8 +79,10 @@ function setbg(id, url) {
 	el = document.getElementById(id);
 
 	// build bg style
-	bi = "url('/".concat(url).concat("')");
+	bi = "url('".concat(url).concat("')");
 	el.style.backgroundImage = bi;
+  console.log(id);
+  console.log(bi);
 }
 
 function setsrc(id, url) {
