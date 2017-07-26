@@ -26,7 +26,6 @@ function prev() {
 	if(index == 0)
 		index = images.length;
 	index--;
-	// setsrc(gallery_img, images[index]);
   setbg(gallery_img, images[index]);
   sethtml(gallery_cap, captions[index]);
 }
@@ -35,7 +34,6 @@ function next() {
 	if(index == images.length-1)
 		index = -1;
 	index++;
-	// setsrc(gallery_img, images[index]);
   setbg(gallery_img, images[index]);
   sethtml(gallery_cap, captions[index]);
 }
@@ -43,8 +41,7 @@ function next() {
 function close_gallery() {
 	inGallery = false;
 	hide(gallery_id);
-	if(attached)
-	{
+	if(attached) {
 		// document.removeEventListener("click", gallery_listener);
 	}
 	attached = false;
@@ -81,8 +78,6 @@ function setbg(id, url) {
 	// build bg style
 	bi = "url('".concat(url).concat("')");
 	el.style.backgroundImage = bi;
-  console.log(id);
-  console.log(bi);
 }
 
 function setsrc(id, url) {
@@ -96,22 +91,19 @@ function sethtml(id, h) {
   el.innerHTML = h;
 }
 
-function hide(id)
-{
+function hide(id) {
 	el = document.getElementById(id);
 	el.classList.remove("visible");
 	el.classList.add("hidden");
 }
 
-function show(id)
-{
+function show(id) {
 	el = document.getElementById(id);
 	el.classList.remove("hidden");
 	el.classList.add("visible");
 }
 
-function gallery_listener(e)
-{
+function gallery_listener(e) {
 	var level = 0;
 	attached = true;
   	for(var element = e.target; element; element = element.parentNode) {
@@ -121,5 +113,4 @@ function gallery_listener(e)
 		}
 		level++;
 	}
-  	console.log("not img-gallery clicked");
 }

@@ -129,14 +129,6 @@ figure.gallery {
   z-index: -1;
 }
 
-img.gallery {
-	max-height: 80%;
-	max-width: 80%;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-}
-
 figcaption.gallery {
   width: 100%;
   text-align: center;
