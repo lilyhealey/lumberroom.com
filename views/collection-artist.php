@@ -14,7 +14,7 @@ foreach ($media as $m)
   $media_urls[] = $url;
   $caption = $m['caption'];
   $media_captions[] = $caption;
-  ?><figure onclick='launch(<? echo $i++; ?>)'><?
+  ?><figure class="thumb" onclick='launch(<? echo $i++; ?>)'><?
     ?><img src="<? echo $url; ?>"><?
     ?><figcaption><? echo nl2br($caption); ?></figcaption><?
   ?></figure><?
