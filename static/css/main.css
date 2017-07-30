@@ -78,9 +78,15 @@ header {
   background-color: white;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: #000;
+}
+
 section.main {
-  max-width: 600px;
-  padding: 0px 30px;
+  max-width: 700px;
+  padding: 30px;
   padding-top: 80px;
 }
 
