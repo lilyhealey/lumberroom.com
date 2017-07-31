@@ -33,6 +33,13 @@ if ($dev)
 else
   die("under construction");
 
+
+function startsWith($haystack, $needle)
+{
+  $length = strlen($needle);
+  return (substr($haystack, 0, $length) === $needle);
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,6 +59,8 @@ else
 	    $children = $oo->children(0);
       foreach ($children as $child)
       {
+        if(startsWith($child['name1'], "."))
+          continue;
         $menu_url = "/".$child['url'];
         if ($child['id'] == $item['id'])
         {
