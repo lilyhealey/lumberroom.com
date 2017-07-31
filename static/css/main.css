@@ -65,7 +65,7 @@ a:active {
 }
 
 body {
-  margin: 0px;
+  margin: 30px;
   font-family: latin-modern-roman;
   font-size: 22px;
 }
@@ -74,6 +74,8 @@ header {
   border-top: 10px solid #EA983f;
   padding: 20px 30px;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: white;
 }
@@ -86,8 +88,6 @@ hr {
 
 section.main {
   max-width: 700px;
-  padding: 30px;
-  padding-top: 80px;
 }
 
 section.body {
@@ -127,6 +127,7 @@ img {
 }
 
 #menu {
+  margin-top: 80px;
   margin-bottom: 44px;
 }
 

@@ -52,9 +52,8 @@ function startsWith($haystack, $needle)
     <script type="text/javascript" src="<? echo $host; ?>static/js/gallery.js"></script>
 	</head>
 	<body>
-	  <div id="header-container"><header><a href="/"><? echo $title; ?></a></header></div>
-	  <section class="main">
-	  <div id="menu"><?
+    <header><a href="/"><? echo $title; ?></a></header>
+	  <section id="menu"><?
 	    $menu_url = "";
 	    $children = $oo->children(0);
       foreach ($children as $child)
@@ -72,4 +71,5 @@ function startsWith($haystack, $needle)
         }
         ?><a href="<? echo $menu_url;?>"><? echo $child['name1']; ?></a></div><?
       }
-	  ?></div>
+	  ?></section>
+    <section class="main">
