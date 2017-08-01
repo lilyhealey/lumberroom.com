@@ -1,7 +1,8 @@
 <?
 $artist = $item['name1'];
 $curr_letter = $artist[0];
-?><h2><? echo $curr_letter; ?></h2><ul><li><? echo $artist; ?></li></ul><?
+?><h2><? echo $curr_letter; ?></h2><ul><li><? echo $artist; ?></li></ul>
+<p><? echo $item['body']; ?><?
 // collect media and captions
 $media = $oo->media($uu->id);
 $media_urls = array();
