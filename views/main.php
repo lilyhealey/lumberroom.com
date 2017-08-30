@@ -10,6 +10,7 @@ $media = $oo->media($current_obj['id']);
 $media_urls = array();
 $media_captions = array();
 $i = 0;
+?><section><h2><? echo $artist; ?></h2><? echo nl2br($current_obj['body'])?></section><?
 ?><section id="hp-thumbnails"><?
 foreach ($media as $m)
 {

@@ -46,7 +46,9 @@ li > a:hover {
 a:link,
 a:visited,
 .select > a:link,
-.select > a:visited  {
+.select > a:visited,
+li > a:link,
+li > a:visited  {
   text-decoration: underline;
 }
 
@@ -119,8 +121,8 @@ figure.thumb {
 
 figcaption {
   font-family: "Courier New";
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
 }
 img {
   max-width: 100%;
@@ -164,7 +166,7 @@ figure.gallery {
 figcaption.gallery {
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 #gallery-div {
@@ -203,6 +205,10 @@ figcaption.gallery {
 
 #gallery-next {
 	right: 0px;
+}
+
+.ex-year {
+  padding-top: 20px;
 }
 
 .center {
