@@ -47,8 +47,8 @@ a:link,
 a:visited,
 .select > a:link,
 .select > a:visited,
-li > a:link,
-li > a:visited  {
+li.exhibition > a:link,
+li.exhibition > a:visited  {
   text-decoration: underline;
 }
 
