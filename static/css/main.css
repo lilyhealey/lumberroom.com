@@ -230,3 +230,13 @@ figcaption.gallery {
 .visible {
 	display: inherit;
 }
+
+p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+p.indent {
+  margin-top: 0;
+  text-indent: 50px;
+}
