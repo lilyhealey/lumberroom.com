@@ -4,7 +4,6 @@ $base_url = "/{$uu->url}/";
 $ex_urls = array();
 $years = array_reverse($years);
 
-
 foreach($years as $y)
 {
   ?><div class="ex-year"><? echo $y['name1']; ?></div><?
@@ -23,5 +22,4 @@ foreach($years as $y)
   }
   ?></ul><?
 }
-
 ?>

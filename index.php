@@ -11,8 +11,12 @@ else {
   $view = "views/{$uri[0]}.php";
   if(empty($uri[1]))
     require_once($view);
-  else
+  else if ($uri[0] == "exhibitions") {
+    require_once("views/exhibition-detail.php");
+  }
+  else {
     require_once("views/collection-artist.php");
+  }
 }
 
 // close body, close html
