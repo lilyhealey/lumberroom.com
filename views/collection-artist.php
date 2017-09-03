@@ -1,24 +1,11 @@
 <?
+
+
 $artist = $item['name1'];
 $curr_letter = $artist[0];
+
 $b = $item['body'];
-
-$pattern = '/\n*(.+)\n*/';
-$replacement = '<p>$1</p>';
-$b = preg_replace($pattern, $replacement, $b);
-
-$pattern = '/<p> {3,}(.*)<\\/p>/';
-$replacement = '<p class="indent">$1</p>';
-$b = preg_replace($pattern, $replacement, $b);
-
-$pattern = '/\n/';
-$replacement = '';
-$b = preg_replace($pattern, $replacement, $b);
-
-$pattern = '/<p>\s*<\\/p>/';
-$replacement = '';
-$b = preg_replace($pattern, $replacement, $b);
-
+$b = process_body($b);
 ?><h2><? echo $curr_letter; ?></h2><ul><li><? echo $artist; ?></li></ul>
 <? echo $b; ?><?
 // collect media and captions

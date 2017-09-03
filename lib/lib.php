@@ -14,4 +14,24 @@ function get_cookie($name)
 	else
 		return null;
 }
+
+function process_body($raw_body) {
+  $pattern = '/\n*(.+)\n*/';
+  $replacement = '<p>$1</p>';
+  $b = preg_replace($pattern, $replacement, $raw_body);
+
+  $pattern = '/<p> {3,}(.*)<\\/p>/';
+  $replacement = '<p class="indent">$1</p>';
+  $b = preg_replace($pattern, $replacement, $b);
+
+  $pattern = '/\n/';
+  $replacement = '';
+  $b = preg_replace($pattern, $replacement, $b);
+
+  $pattern = '/<p>\s*<\\/p>/';
+  $replacement = '';
+  $b = preg_replace($pattern, $replacement, $b);
+
+  return $b;
+}
 ?>

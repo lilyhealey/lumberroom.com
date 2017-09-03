@@ -2,15 +2,17 @@
 $current_id = 174;
 $current_obj = $oo->children($current_id)[0];
 
-$artist = $current_obj['name1'];
-$curr_letter = $artist[0];
+$name = $current_obj['name1'];
+$body = process_body($current_obj['body']);
+
+?><section><p><? echo $name; ?></p><? echo $body; ?></section><?
 
 // collect media and captions
 $media = $oo->media($current_obj['id']);
 $media_urls = array();
 $media_captions = array();
 $i = 0;
-?><section><h2><? echo $artist; ?></h2><? echo nl2br($current_obj['body'])?></section><?
+
 ?><section id="hp-thumbnails"><?
 foreach ($media as $m)
 {

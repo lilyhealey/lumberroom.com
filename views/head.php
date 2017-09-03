@@ -25,6 +25,7 @@ if ($uu->id)
 else
   $item = $oo->get(0);
 
+/*
 $dev = get_cookie('dev');
 if (!$dev)
   $dev = $_GET['dev'];
@@ -32,7 +33,7 @@ if ($dev)
   set_cookie('dev', $dev);
 else
   die("under construction");
-
+*/
 
 function startsWith($haystack, $needle)
 {
