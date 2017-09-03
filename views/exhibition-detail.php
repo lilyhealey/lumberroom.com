@@ -2,7 +2,7 @@
 $name = $item['name1'];
 $b = $item['body'];
 $b = process_body($b);
-?><ul><li><? echo $name; ?></li></ul>
+?><ul><p><? echo $uri[1]; ?></p><li><? echo $name; ?></li></ul>
 <? echo $b; ?><?
 // collect media and captions
 $media = $oo->media($uu->id);
@@ -20,6 +20,5 @@ foreach ($media as $m)
     ?><figcaption><? echo nl2br($caption); ?></figcaption><?
   ?></figure><?
 }
-
 require_once("gallery.php");
 ?>
