@@ -2,7 +2,7 @@
 $name = $item['name1'];
 $b = $item['body'];
 $b = process_body($b);
-?><ul><p><? echo $uri[1]; ?></p><li><? echo $name; ?></li></ul>
+?><ul><li><? echo $name; ?></li></ul>
 <? echo $b; ?><?
 // collect media and captions
 $media = $oo->media($uu->id);

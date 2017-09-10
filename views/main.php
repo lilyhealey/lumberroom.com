@@ -5,7 +5,13 @@ $current_obj = $oo->children($current_id)[0];
 $name = $current_obj['name1'];
 $body = process_body($current_obj['body']);
 
-?><section><p><? echo $name; ?></p><? echo $body; ?></section><?
+
+?><section><?
+if ($name[0] != ".")
+{
+  ?><p><? echo $name; ?></p><?
+}
+?><? echo $body; ?></section><?
 
 // collect media and captions
 $media = $oo->media($current_obj['id']);

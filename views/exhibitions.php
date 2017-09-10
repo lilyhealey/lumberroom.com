@@ -18,7 +18,7 @@ foreach($years as $y)
   $end_day = date("n/j/y", $end);
 
   $url = $base_url.$y['url']."/".$e['url'];
-  ?><li class="exhibition"><a href="<? echo $url; ?>"><? echo $e['name1']."; ".$begin_day; ?> – <? echo "$end_day"; ?></a></li><?
+  ?><li class="exhibition"><a href="<? echo $url; ?>"><? echo strip_tags($e['name1'])."; ".$begin_day; ?> – <? echo "$end_day"; ?></a></li><?
   }
   ?></ul><?
 }
