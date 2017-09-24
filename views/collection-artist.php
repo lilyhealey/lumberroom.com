@@ -16,14 +16,17 @@ $i = 0;
 
 foreach ($media as $m)
 {
-  $url = m_url($m);
-  $media_urls[] = $url;
-  $caption = $m['caption'];
-  $media_captions[] = $caption;
-  ?><figure class="thumb" onclick='launch(<? echo $i++; ?>)'><?
-    ?><img src="<? echo $url; ?>"><?
-    ?><figcaption><? echo nl2br($caption); ?></figcaption><?
-  ?></figure><?
+  if (strcasecmp($media['type'], "pdf") != 0)
+  {
+    $url = m_url($m);
+    $media_urls[] = $url;
+    $caption = $m['caption'];
+    $media_captions[] = $caption;
+    ?><figure class="thumb" onclick='launch(<? echo $i++; ?>)'><?
+      ?><img src="<? echo $url; ?>"><?
+      ?><figcaption><? echo nl2br($caption); ?></figcaption><?
+    ?></figure><?
+  }
 }
 
 require_once("gallery.php");
