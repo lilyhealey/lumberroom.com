@@ -2,6 +2,7 @@
 $name = $item['name1'];
 $b = $item['body'];
 $b = process_body($b);
+
 ?><ul><li><? echo $name; ?></li></ul>
 <? echo $b; ?><?
 // collect media and captions
