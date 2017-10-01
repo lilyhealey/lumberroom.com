@@ -88,6 +88,10 @@ hr {
   background: #000;
 }
 
+hr.hrbr {
+  background: #fff;
+}
+
 section.main {
   /* max-width: 700px; */
 }
@@ -241,6 +245,10 @@ p {
 p.indent {
   margin-top: 0;
   text-indent: 50px;
+}
+
+p:first-of-type {
+  margin-top: 0;
 }
 
 div.book {

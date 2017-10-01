@@ -16,9 +16,13 @@ function get_cookie($name)
 }
 
 function process_body($raw_body) {
+  $pattern = '/^<br>/';
+  $replacement = '<hr class="hrbr">';
+  $b = preg_replace($pattern, $replacement, $raw_body);
+
   $pattern = '/\n*(.+)\n*/';
   $replacement = '<p>$1</p>';
-  $b = preg_replace($pattern, $replacement, $raw_body);
+  $b = preg_replace($pattern, $replacement, $b);
 
   $pattern = '/<p> {3,}(.*?)<\\/p>/';
   $replacement = '<p class="indent">$1</p>';
