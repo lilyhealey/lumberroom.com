@@ -11,11 +11,20 @@ foreach($years as $y)
   ?><ul><?
   foreach ($exhibitions as $e)
   {
-  $begin = strtotime($e['begin']);
-  $end = strtotime($e['end']);
-
-  $begin_day = date("n/j/y", $begin);
-  $end_day = date("n/j/y", $end);
+    if($e['begin'])
+    {
+      $begin = strtotime($e['begin']);
+      $begin_day = date("n/j/y", $begin);
+    }
+    else
+      $begin_day = ". . .";
+    if($e['end'])
+    {
+      $end = strtotime($e['end']);
+      $end_day = date("n/j/y", $end);
+    }
+    else
+      $end_day = ". . .";
 
   $url = $base_url.$y['url']."/".$e['url'];
   ?><li class="exhibition"><a href="<? echo $url; ?>"><? echo strip_tags($e['name1'])."; ".$begin_day; ?> – <? echo "$end_day"; ?></a></li><?
