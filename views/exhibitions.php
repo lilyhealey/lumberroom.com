@@ -8,6 +8,7 @@ foreach($years as $y)
 {
   ?><div class="ex-year"><? echo $y['name1']; ?></div><?
   $exhibitions = $oo->children($y['id']);
+  $exhibitions = array_reverse($exhibitions);
   ?><ul><?
   foreach ($exhibitions as $e)
   {
