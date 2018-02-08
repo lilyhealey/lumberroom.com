@@ -273,3 +273,17 @@ div.book {
 .book-desc > :first-child {
   margin-top: 0;
 }
+
+@media screen and (max-width: 400pt) {
+  figure.thumb {
+    width: 100%;
+  }
+
+  figcaption {
+    display: none;
+  }
+
+  figcaption.gallery {
+    display: block;
+  }
+}
