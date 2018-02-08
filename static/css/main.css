@@ -286,4 +286,8 @@ div.book {
   figcaption.gallery {
     display: block;
   }
+
+  .hide-mobile {
+    display: none;
+  }
 }
