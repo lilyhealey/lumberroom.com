@@ -1,5 +1,5 @@
 <?
-$current_id = 174;
+$current_id = 234;
 $current_obj = $oo->children($current_id)[0];
 
 $name = $current_obj['name1'];
