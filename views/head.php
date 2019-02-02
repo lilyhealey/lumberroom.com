@@ -17,7 +17,7 @@ $mm = new Media();
 $ww = new Wires();
 $uu = new URL();
 
-$title = "Lumber Room";
+$title = "lumber room";
 
 // self
 if ($uu->id)
