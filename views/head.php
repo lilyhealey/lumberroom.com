@@ -54,7 +54,7 @@ function startsWith($haystack, $needle)
 	</head>
 	<body>
     <header><a href="/"><? echo $title; ?></a></header>
-	  <section id="menu"><?
+      <section id="menu"><?
 	    $menu_url = "";
 	    $children = $oo->children(0);
       foreach ($children as $child)
@@ -62,6 +62,14 @@ function startsWith($haystack, $needle)
         if(startsWith($child['name1'], "."))
           continue;
         $menu_url = "/".$child['url'];
+        // this is a hack for collections pages
+        // any child of the 'collection' object should modify the collection
+        // menu item so as to navigate back to collection#LETTER where LETTER
+        // is the first letter of the child's uri. for example,
+        // /collection/friedlander-lee will navigate back to /collection#f
+        if ($uri[0] == "collection" && sizeof($uri) == 2) {
+          $menu_url.= "#" . substr($uri[1], 0, 1);
+        }
         if ($child['id'] == $item['id'])
         {
         ?><div class="menu-item select"><?

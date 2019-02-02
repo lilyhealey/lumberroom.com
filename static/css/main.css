@@ -70,6 +70,7 @@ body {
   margin: 30px;
   font-family: latin-modern-roman;
   font-size: 22px;
+  /* margin-bottom: calc(100vh - 82px); */
 }
 
 header {
@@ -80,6 +81,7 @@ header {
   left: 0;
   width: 100%;
   background-color: white;
+  z-index: 2;
 }
 
 hr {
@@ -290,4 +292,15 @@ div.book {
   .hide-mobile {
     display: none;
   }
+}
+
+
+.anchor {
+  position: relative;
+}
+
+.anchor a {
+  position: absolute;
+  left: 0px;
+  top: -82px;
 }
