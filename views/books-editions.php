@@ -1,6 +1,6 @@
 <?
 ?><p>Books &amp; Editions</p>
-<p>To order please e-mail order (at) lumberroom.com</p><?
+<p>To order or for additional information, please contact: <a href="mailto:info@lumberroom.com">info@lumberroom.com</a></p><?
 $books = $oo->children($uu->id);
 $base_url = "/{$uu->url}/";
 
