@@ -6,12 +6,15 @@ require_once($config."/lib/lib.php");
 $config = $config."/open-records-generator/config/config.php";
 require_once($config);
 
+$config_dir = $root."/config/";
+require_once($config_dir."url.php");
+
 $db = db_connect("guest");
 
 $oo = new Objects();
 $mm = new Media();
 $ww = new Wires();
-$uu = new URL(['collection']);
+$uu = new URL('collection');
 
 $artists = $oo->children($uu->id);
 
