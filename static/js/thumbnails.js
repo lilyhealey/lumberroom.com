@@ -78,9 +78,11 @@ function getThumbnails(start, num) {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       const container = document.getElementById('collection-thumbs-container');
-      const child = document.createElement('div');
-      child.innerHTML = this.responseText;
-      container.appendChild(child);
+      const tmpDiv = document.createElement('div');
+      tmpDiv.innerHTML = this.responseText;
+      while (tmpDiv.childNodes.length > 0) {
+        container.appendChild(tmpDiv.childNodes[0]);
+      }
     }
   };
   const queryParams = new URLSearchParams({
