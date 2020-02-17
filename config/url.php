@@ -4,11 +4,15 @@
 */
 class URL extends URL_Base
 {	
-	function __construct()
+	function __construct($uri = null)
 	{
 		global $oo;
-		$urls = explode('/', $_SERVER['REQUEST_URI']);
-		$urls = array_slice($urls, 1);
+		if ($uri) {
+			$urls = explode('/', $uri);
+		} else {
+			$urls = explode('/', $_SERVER['REQUEST_URI']);
+			$urls = array_slice($urls, 1);
+		}
 		
 		// check that the object that this URL refers to exists
 		try

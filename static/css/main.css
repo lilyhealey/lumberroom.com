@@ -26,6 +26,7 @@
 */
 a {
   color: black;
+  cursor: pointer;
 }
 
 header > a:link,
@@ -43,10 +44,23 @@ li > a:hover {
   text-decoration: underline;
 }
 
+figure.thumbnail {
+  cursor: pointer;
+  display: inline-flex;
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  max-height: 200px;
+  margin: 20px;
+}
+
 a:link,
 a:visited,
 .select > a:link,
 .select > a:visited,
+a.select,
+a:link.select,
+a:visited.select,
 li.exhibition > a:link,
 li.exhibition > a:visited  {
   text-decoration: underline;
@@ -149,6 +163,7 @@ figcaption.gallery {
 
 img {
   max-width: 100%;
+  object-fit: contain;
 }
 
 #menu {

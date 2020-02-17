@@ -1,45 +1,7 @@
-<?
-// path to config file
-$config = $_SERVER["DOCUMENT_ROOT"];
-$config = $config."/open-records-generator/config/config.php";
-require_once($config);
+<?php
 
-// specific to this 'app'
-$config_dir = $root."/config/";
-require_once($config_dir."url.php");
-// require_once($config_dir."request.php");
-require_once("lib/lib.php");
-
-$db = db_connect("guest");
-
-$oo = new Objects();
-$mm = new Media();
-$ww = new Wires();
-$uu = new URL();
-
+// head variables
 $title = "lumber room";
-
-// self
-if ($uu->id)
-  $item = $oo->get($uu->id);
-else
-  $item = $oo->get(0);
-
-/*
-$dev = get_cookie('dev');
-if (!$dev)
-  $dev = $_GET['dev'];
-if ($dev)
-  set_cookie('dev', $dev);
-else
-  die("under construction");
-*/
-
-function startsWith($haystack, $needle)
-{
-  $length = strlen($needle);
-  return (substr($haystack, 0, $length) === $needle);
-}
 
 ?>
 <!DOCTYPE html>
@@ -54,7 +16,7 @@ function startsWith($haystack, $needle)
 	</head>
 	<body>
     <header><a href="/"><? echo $title; ?></a></header>
-      <section id="menu"><?
+    <section id="menu"><?php
 	    $menu_url = "";
 	    $children = $oo->children(0);
       foreach ($children as $child)
@@ -62,6 +24,7 @@ function startsWith($haystack, $needle)
         if(startsWith($child['name1'], "."))
           continue;
         $menu_url = "/".$child['url'];
+
         // this is a hack for collections pages
         // any child of the 'collection' object should modify the collection
         // menu item so as to navigate back to collection#LETTER where LETTER
@@ -70,15 +33,29 @@ function startsWith($haystack, $needle)
         if ($uri[0] == "collection" && sizeof($uri) == 2) {
           $menu_url.= "#" . substr($uri[1], 0, 1);
         }
-        if ($child['id'] == $item['id'])
-        {
-        ?><div class="menu-item select"><?
+
+        if ($uri[0] == "collection") {
+          if ($child['id'] == $item['id']) {
+            ?><div class="menu-item">
+              <a class="select" href="<? echo $menu_url;?>">Collection</a>,
+              <a id="collection-index" class="select" onclick="showCollectionIndex()">Index</a>,
+              <a id="collection-thumbnails" onclick="getCollectionThumbnails()">Thumbnails</a>
+            </div><?
+          }
+          else {
+            ?><div class="menu-item">
+              <a href="<? echo $menu_url;?>"><? echo $child['name1']; ?></a>
+            </div><?
+          }
+        } else {
+          if ($child['id'] == $item['id']) {
+            ?><div class="menu-item select"><?
+          }
+          else {
+            ?><div class="menu-item"><?
+          }
+          ?><a href="<? echo $menu_url;?>"><? echo $child['name1']; ?></a></div><?
         }
-        else
-        {
-        ?><div class="menu-item"><?
-        }
-        ?><a href="<? echo $menu_url;?>"><? echo $child['name1']; ?></a></div><?
       }
 	  ?></section>
     <section class="main">
