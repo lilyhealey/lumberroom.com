@@ -18,6 +18,16 @@ function launch(i) {
 	inGallery = true;
 }
 
+function launchMulti(i, j) {
+	show(gallery_id);
+	setbg(gallery_img, multi_images[j][i]);
+	sethtml(gallery_cap, multi_captions[j][i]);
+	index = i;
+	inGallery = true;
+	images = multi_images[j];
+	captions = multi_captions[j];
+}
+
 function gallery_listener_set() {
 	inGallery = true;
 }
