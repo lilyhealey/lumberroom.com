@@ -1,4 +1,4 @@
-const baseUrl = `${window.location.hostname}/index.php`;
+const baseUrl = `http://${window.location.hostname}/index.php`;
 const baseAjaxParams = {
   ajax: true
 };
